@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/go-chi/chi"
 	"graphql/book"
-	"graphql/infrastruktur"
+	"graphql/infrastructure"
 	"log"
 	"net/http"
 	"net/url"
@@ -21,7 +21,7 @@ func init() {
 	val := url.Values{}
 	val.Add("parseTime", "1")
 	val.Add("loc", "Asia/Jakarta")
-	env := infrastruktur.Environment{}
+	env := infrastructure.Environment{}
 	env.SetEnvironment()
 	env.LoadConfig()
 	env.InitMongoDB()

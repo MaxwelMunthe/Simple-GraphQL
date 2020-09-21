@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"graphql/infrastruktur"
+	"graphql/infrastructure"
 
 	"github.com/go-chi/chi"
 	"go.mongodb.org/mongo-driver/bson"
@@ -17,7 +17,7 @@ func RestApiGetBook(w http.ResponseWriter, r *http.Request) {
 	books := &Book{}
 	bookName := chi.URLParam(r, "bookname")
 
-	cur, err := infrastruktur.Mongodb.Collection("booklist").Find(ctx, bson.M{"name": bookName})
+	cur, err := infrastructure.Mongodb.Collection("booklist").Find(ctx, bson.M{"name": bookName})
 	defer cur.Close(ctx)
 	if err != nil {
 		log.Println(err)

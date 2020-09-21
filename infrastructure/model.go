@@ -1,4 +1,4 @@
-package infrastruktur
+package infrastructure
 
 type app struct {
 	Appname     string `yaml:"name"`

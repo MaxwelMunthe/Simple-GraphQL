@@ -12,7 +12,7 @@
 .idea
 .DS_Store
 logs/
-vendor/
+/vendor
 .vscode
 .vscode/launch.json
 .yo-rc.json
